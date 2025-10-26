@@ -3,6 +3,7 @@
 using namespace std;
 
 struct Test {
+    int value;
     Test() { cout << "malloc\n"; }
     ~Test() { cout << "free\n"; }
 };
@@ -10,8 +11,9 @@ struct Test {
 int main() {
     cout<<"start\n";
     {
-        unique_ptr<Test> p = make_unique<Test>();
-    } // 여기서 p가 스코프를 벗어나며 자동으로 delete 호출됨
+        Test* p = new Test();
+        // delete p;
+    }
     cout<<"end\n";
 }
 

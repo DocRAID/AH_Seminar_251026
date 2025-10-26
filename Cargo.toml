@@ -1,0 +1,10 @@
+[package]
+name = "AH_Seminar_251026"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+eframe = "0.33.0"
+chrono = "0.4"
+rand = "0.8"
+base64 = "0.21"
